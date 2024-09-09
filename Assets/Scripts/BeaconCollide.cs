@@ -28,7 +28,6 @@ public class BeaconCollide : MonoBehaviour
             //activate minigame and destroy beacon
                 Destroy(gameObject);
                 Debug.Log("hit beacon");
-                GetComponent<FreezeScript>().Freeze();
             }
     }
 }
