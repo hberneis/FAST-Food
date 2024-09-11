@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WinMessage : MonoBehaviour
 {   
-    public int points = 0;
+/*    public int points = 0;
     public int seconds = 0;
     public string strpoints = Convert.ToString(points);
     public string strseconds = Convert.ToString(seconds);
@@ -16,7 +16,7 @@ public class WinMessage : MonoBehaviour
     void Start()
     {
         winText.SetActive(false);
-        //getcomponent seconds and points from other scripts
+        getcomponent seconds and points from other scripts
     }
 
     // Update is called once per frame
@@ -24,4 +24,5 @@ public class WinMessage : MonoBehaviour
     {
         winText.GetComponent<Text>().text = ("You won {} points in {} seconds", strpoints, strseconds);
     }
+    */
 }
