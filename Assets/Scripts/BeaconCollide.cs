@@ -1,23 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BeaconCollide : MonoBehaviour
 {
     public GameObject car;
+    public static int points = 0;
+    public TextMeshProUGUI pointsTxt;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if (Input.GetKeyDown("o"))
-        {
-            this.GetComponent<CarController>().enabled=true;
-        }
     }
     
     //if collide with car then...
@@ -26,8 +25,11 @@ public class BeaconCollide : MonoBehaviour
         if(other.gameObject == car)
             {
             //activate minigame and destroy beacon
-                Destroy(gameObject);
+                points += 100;
+                pointsTxt.text = "Points: " + points;
                 Debug.Log("hit beacon");
+                Debug.Log(points);
+                Destroy(gameObject);
             }
     }
 }
